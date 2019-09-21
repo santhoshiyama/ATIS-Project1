@@ -75,14 +75,13 @@ public class LoadAndQueryDBLPHdt {
 	}
 	@CrossOrigin
 	@RequestMapping(method = RequestMethod.GET, path = "/load")
-	public String queryData(@RequestParam("fauth") String firstAuthor, @RequestParam("sauth") String secondAuthor)
+	public int queryData(@RequestParam("fauth") String firstAuthor, @RequestParam("sauth") String secondAuthor)
 	{
 		if(firstAuthor != null)
 			System.out.println(firstAuthor);
 		if(secondAuthor != null)
 			System.out.println(secondAuthor);
 		int counter = 0;
-		String coi_level = null;
 		if(model != null)
 		{
 			String query1 = "prefix foaf: <http://xmlns.com/foaf/0.1/> prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> "
@@ -105,13 +104,7 @@ public class LoadAndQueryDBLPHdt {
 			
 			qe.close();
 		}
-		if((counter >= 0) && (counter <= 5)){
-			coi_level = "Low";
-		}else if((counter > 5) && (counter <= 15)){
-			coi_level = "Medium";
-		}else if((counter > 15)){
-			coi_level ="High";
-		}
-		return coi_level;
+		
+		return counter;
 	}
 }
