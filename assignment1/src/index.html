@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" >
+<title>Demo HTML</title>
+<script src="jquery.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+<style type="text/css">
+.form-group{
+  position:relative;
+  top:160px;
+  left:70px;
+}
+.d{
+  font-weight:bold;
+  font-size:40px;
+  position:relative;
+  top:100px;
+  left:50px;
+}
+.gh{
+  position:relative;
+  top:25px;
+}
+.ghj{
+  position:relative;
+  top:160px;
+  left:50px;
+}
+</style>
+
+</head>
+<body>
+
+<p class="d">Project 1</p>
+
+<form class="form-horizontal" id="myform">
+  
+  <div class="form-group row">
+    <div class="col-xs-3">
+    	<span class="label label-default">Author1</span>
+    	<input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter content">
+    	
+    </div>
+    <div class="col-xs-3">
+    	<span class="label label-default">Author2</span>
+    	<input type="text" class="form-control" id="exampleInputEmail2" placeholder="Enter content">
+    	
+    </div>
+    <div class="gh"> <button type="submit" class="btn btn-primary">Search</button></div>
+  </div>
+  <div id="server-results"  class="ghj">123456</div>
+</form>
+
+<script src="main.js"></script>
+
+</body>
+</html>
