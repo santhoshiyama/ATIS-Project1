@@ -10,6 +10,7 @@ import javax.annotation.PreDestroy;
 import org.rdfhdt.hdt.hdt.HDT;
 import org.rdfhdt.hdt.hdt.HDTManager;
 import org.rdfhdt.hdtjena.HDTGraph;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -72,7 +73,7 @@ public class LoadAndQueryDBLPHdt {
 		qe.close();
 		return response;
 	}
-	
+	@CrossOrigin
 	@RequestMapping(method = RequestMethod.GET, path = "/load")
 	public int queryData(@RequestParam("fauth") String firstAuthor, @RequestParam("sauth") String secondAuthor)
 	{
