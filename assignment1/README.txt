@@ -6,10 +6,9 @@ NOTE: If index file is not downloaded from above link, then it takes lot of time
 3. Import the downloaded project as a Maven Project on any IDE. 
 4. In "LoadAndQueryDBLPHdt.java" file, give the path of dataset where you have downloaded the hdt file.
 5. Open "Assignment1Application.java" file and right-click, select 'Run As--->Java Application'.
-6. Try to access the endpoint using "http://localhost:8080/load?fauth=santhoshi%20gurram&sauth=def"
+6. Try to access the endpoint using  Example : "http://localhost:8080/load?fauth=C. J. Date&sauth=E. F. Codd"
 NOTE: a)fauth and sauth should be the values given from Frontend page.
-b) SPARQL query is not yet implemented correctly. For now, I have included a generic query. 
-Need help on this part-------constructing a SPARQL query.
+
 
 __________________________________________________________________________________________________
 
