@@ -11,7 +11,7 @@ NOTE: a)fauth and sauth should be the values given from Frontend page.
 b) SPARQL query is not yet implemented correctly. For now, I have included a generic query. 
 Need help on this part-------constructing a SPARQL query.
 
-！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！
+__________________________________________________________________________________________________
 
 Steps to show the results on front end:
 1. Clone/Download the project from github
