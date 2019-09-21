@@ -10,3 +10,11 @@ NOTE: If index file is not downloaded from above link, then it takes lot of time
 NOTE: a)fauth and sauth should be the values given from Frontend page.
 b) SPARQL query is not yet implemented correctly. For now, I have included a generic query. 
 Need help on this part-------constructing a SPARQL query.
+
+！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！
+
+Steps to show the results on front end:
+1. Clone/Download the project from github
+2. Make sure that your browser does not have the Access-Control-Allow-Origin issue. If it happens, please download the addon and install on your browser. Search the addon name which called Allow CORS: Access-Control-Allow-Origin, author: Muyor.
+3. Make sure that you import the jquery framework.
+4. When you access the endpoint, open the demo html which is index.html and start to discover.
