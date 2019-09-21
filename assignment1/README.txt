@@ -21,6 +21,6 @@ Steps to show the results on front end:
 
 Issues:
 1. Access-Control-Allow-Origin issue.
-  Solution: Added "@CrossOrigin" annotation and respective package in "Assignment1Application.java" to resolve this issue.
+  Solution: Added "@CrossOrigin" annotation and respective package in "LoadAndQueryDBLPHdt.java" to resolve this issue.
   Reference: https://spring.io/blog/2015/06/08/cors-support-in-spring-framework
 2. Result COI value is not being displayed in frontend. Tried and unable to fix it. Help reuired.
