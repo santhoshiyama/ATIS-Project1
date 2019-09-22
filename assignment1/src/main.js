@@ -11,8 +11,7 @@ $("#myform").submit(
 			$.ajax({
 				url : targetUrl,
 				type : "GET",
-				data : form_data,
-				dataType : "XML"
+				data : form_data
 			}).done(function(response) {
 				var coi_level;
 				if((response >= 0) && (response <= 5)){
@@ -23,8 +22,7 @@ $("#myform").submit(
 					coi_level ="High";
 				}
 				document.getElementById("server-results").innerHTML = 
-					"<b><u>Result</u></b><br>Number of co-authored papers by <b>"+name+"</b> and <b>"+name2+"</b> is: 
-							<b>"+response+"</b><br>Calculated COI Level is: <b>"+coi_level+"</b>";
+					"<b><u>Result</u></b><br>Number of co-authored papers by <b>"+name+"</b> and <b>"+name2+"</b> is: <b>"+response+"</b><br>Calculated COI Level is: <b>"+coi_level+"</b>";
 			});
 
 		});

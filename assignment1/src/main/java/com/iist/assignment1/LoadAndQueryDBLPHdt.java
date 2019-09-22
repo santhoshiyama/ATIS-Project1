@@ -35,7 +35,7 @@ public class LoadAndQueryDBLPHdt {
 	{
 		HDT hdt;
 		try {
-			hdt = HDTManager.mapIndexedHDT("/Users/santhoshiyama/Downloads/dblp-20170124.hdt", null);
+			hdt = HDTManager.mapIndexedHDT("/Users/tripp/Downloads/dblp-20170124.hdt", null);
 			// Create Jena Model on top of HDT.
 			HDTGraph graph = new HDTGraph(hdt, true);
 			model = ModelFactory.createModelForGraph(graph);
@@ -98,7 +98,7 @@ public class LoadAndQueryDBLPHdt {
 			ResultSet rs= qe.execSelect();
 			while(rs.hasNext())
 			{
-				rs.next();
+				System.out.println(rs.next());
 				counter+=1;
 			}
 			

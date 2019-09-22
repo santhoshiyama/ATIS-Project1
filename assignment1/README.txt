@@ -1,28 +1,40 @@
-Steps to execute the project:
+Steps to run project:
 
-1. Clone/Download the project from github
-2. Make sure you have dblp dataset files(includes original hdt file and index file) downloaded from http://www.rdfhdt.org/datasets/
-NOTE: If index file is not downloaded from above link, then it takes lot of time to start the server on your local machine.
-3. Import the downloaded project as a Maven Project on any IDE. 
-4. In "LoadAndQueryDBLPHdt.java" file, give the path of dataset where you have downloaded the hdt file.
-5. Open "Assignment1Application.java" file and right-click, select 'Run As--->Java Application'.
-6. Try to access the endpoint using  Example : "http://localhost:8080/load?fauth=C. J. Date&sauth=E. F. Codd"
-NOTE: a)fauth and sauth should be the values given from Frontend page.
+(Assumption: Running via IDE)
 
+1. Change the filepath on line 38 of LoadAndQueryDBLPHdt.java to your local instance of dblp-20170124.hdt
+2. Run main method in class Assisgnemnt1Application. This will start a server on localhost:8080 (Note: the first time running this, an index.hdt file will be created. This process will take a while. Go grab a coffee and relax for a bit)
+3. Manually open index.html in a web browser (it's not hosted on the web server itself)
+4. From that web page, enter two author's names (Note: They need to be exact matches of author's labels in DBLP)
+5. Results will be populated on the screen showing number of publications the two authors have done together and a COI value
+6. Search more authors and have fun :)
 
-__________________________________________________________________________________________________
+----------------------------------------------------------------------------
 
-Steps to show the results on front end:
-1. Clone/Download the project from github
-2. Make sure that your browser does not have the Access-Control-Allow-Origin issue. If it happens, please download the addon and install on your browser. Search the addon name which called Allow CORS: Access-Control-Allow-Origin, author: Muyor.
-3. Make sure that you import the jquery framework.
-4. When you access the endpoint, open the demo html which is index.html and start to discover.
+Architecture:
 
+Assignemnt1Application.java: main method used to start web service. Spring Boot Application
+LoadAndQueryDBLPHdt.java: Java class where our HTTP request handlers exist. Two main endpoints:
+	- /authors/get: Return all authors within DBLP (Will take a substantial amount of time)
+	- /load (paramaters: fauth = first author, sauth = second author): Gets a count of publications between given authors
+index.html: Web interface
+jquery.min.js: JQuery Javascript
+main.js: Javascript created to call /load endpoint and update web page
 
-Issues:
-1. Access-Control-Allow-Origin issue.
-  Solution: Added "@CrossOrigin" annotation and respective package in "LoadAndQueryDBLPHdt.java" to resolve this issue.
-  Reference: https://spring.io/blog/2015/06/08/cors-support-in-spring-framework
-2. Result COI value is not being displayed in frontend.
-  Solution: Implemented JS to assign the value to div tag as jQuery has some issues.
-  Reference: Past Experience :)
+---------------------------------------------------------------------------- 
+
+COI Scale:
+
+0-5 Papers: Low
+6-15 Papers: Medium
+>15: High
+
+----------------------------------------------------------------------------
+
+Examples:
+
+C. J. Date & E. F. Codd: 	3 Papers, Low COI
+Nirmalya Roy & Nilavra Pathak: 	4 Papers, Low COI
+Anis Charfi & Mira Mezini:	27 Papers, High COI
+Clement T. Yu & Hai He		16 Papers, High COI
+Weiyi Meng & Yiyao Lu		8 Paper, Medium COI
