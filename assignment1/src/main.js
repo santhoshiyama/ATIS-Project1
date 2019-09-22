@@ -11,7 +11,8 @@ $("#myform").submit(
 			$.ajax({
 				url : targetUrl,
 				type : "GET",
-				data : form_data
+				data : form_data,
+				dataType : "XML"
 			}).done(function(response) {
 				var coi_level;
 				if((response >= 0) && (response <= 5)){
