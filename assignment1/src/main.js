@@ -22,8 +22,8 @@ $("#myform").submit(
 					coi_level ="High";
 				}
 				document.getElementById("server-results").innerHTML = 
-					"<b><u>Result</u></b><br>Number of co-authored papers by <b>"+name+"</b> and <b>"+name2+"</b> is: 
-							<b>"+response+"</b><br>Calculated COI Level is: <b>"+coi_level+"</b>";
+				"<b><u>Result</u></b><br>Number of co-authored papers by <b>"+name+"</b> and <b>"+name2+"</b> is: <b>"
+					+response+"</b><br>Calculated COI Level is: <b>"+coi_level+"</b>";
 			});
 
 		});
